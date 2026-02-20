@@ -1,0 +1,341 @@
+[
+  {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
+        "name": "description",
+        "label": "Description"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "name": "robots",
+        "label": "Robots",
+        "description": "Index control via robots"
+      }
+    ]
+  },
+  {
+    "id": "image",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "img:nth-child(3)[src]",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "img:nth-child(3)[alt]",
+        "label": "Alt Text"
+      }
+    ]
+  },
+  {
+    "id": "section",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Highlight",
+            "value": "highlight"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "summary",
+        "value": "",
+        "label": "Summary",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "position",
+        "value": "",
+        "label": "Image Position",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "backgroundImage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "backgroundImageAlt",
+        "label": "Background Image Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "columns",
+    "fields": [
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "columns",
+        "label": "Number of Columns",
+        "value": 2,
+        "validation": {
+          "numberMin": 1,
+          "numberMax": 6
+        }
+      }
+    ]
+  },
+  {
+    "id": "dynamicmedia-template",
+    "fields": [
+      {
+        "component": "text",
+        "name": "type",
+        "label": "Type",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "dynamicMediaUrl",
+        "label": "Dynamic Media URL",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "variableMappings",
+        "label": "Variable Mappings",
+        "multi": true
+      }
+    ]
+  },
+  {
+    "id": "fragment",
+    "fields": [
+      {
+        "component": "text",
+        "name": "fragmentUrl",
+        "label": "Fragment URL",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "fragmentUrlText",
+        "label": "Fragment URL Text"
+      }
+    ]
+  },
+  {
+    "id": "hero",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "alt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "quote",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "quote",
+        "label": "Quote",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "author",
+        "label": "Author",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "search",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)[href]",
+        "label": "Search URL",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)",
+        "label": "Search URL Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "tabs-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "valueType": "string",
+        "label": "Tab Name",
+        "multi": false,
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Content",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "teaser",
+    "fields": [
+      {
+        "component": "text",
+        "name": "teaserBlurb",
+        "label": "Teaser Blurb",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "teaserStyle",
+        "label": "Teaser Style",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "videoReference",
+        "label": "Video Reference",
+        "required": true
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "imageReference",
+        "label": "Image Reference",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "buttonText",
+        "label": "Button Text",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "buttonLink",
+        "label": "Button Link",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "video",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "posterImage",
+        "label": "Poster Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "videoUrl",
+        "label": "Video URL",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "videoUrlText",
+        "label": "Video URL Text",
+        "valueType": "string"
+      }
+    ]
+  }
+]

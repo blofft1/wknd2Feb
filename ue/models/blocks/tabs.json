@@ -1,0 +1,61 @@
+{
+  "definitions": [
+    {
+      "title": "Tabs",
+      "id": "tabs",
+      "model": "tabs",
+      "filter": "tabs",
+      "plugins": {
+        "da": {
+          "rows": 1,
+          "columns": 2
+        }
+      }
+    },
+    {
+      "title": "Tabs Item",
+      "id": "tabs-item",
+      "model": "tabs-item",
+      "plugins": {
+        "da": {
+          "rows": 1,
+          "columns": 2,
+          "fields": [
+            { "name": "title", "selector": "div:nth-child(1)>p:nth-child(1)" },
+            { "name": "content", "selector": "div:nth-child(2)" }
+          ]
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "tabs-item",
+      "fields": [
+        {
+          "component": "text",
+          "name": "title",
+          "valueType": "string",
+          "label": "Tab Name",
+          "multi": false,
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "name": "content",
+          "label": "Content",
+          "valueType": "string",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "tabs",
+      "components": [
+        "tabs-item"
+      ]
+    }
+  ]
+}

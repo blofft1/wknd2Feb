@@ -95,6 +95,8 @@ async function loadFonts() {
 export function decorateDMImages(main) {
   main.querySelectorAll('a[href^="https://delivery-p"]').forEach((a) => {
     const url = new URL(a.href.split('?')[0]);
+    // Skip DM Video delivery URLs — these are handled by block code (e.g. hero, video)
+    if (url.pathname.endsWith('/play')) return;
     if (url.hostname.endsWith('.adobeaemcloud.com')) {
       const blockBeingDecorated = whatBlockIsThis(a);
       let blockName = '';

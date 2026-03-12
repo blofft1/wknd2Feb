@@ -76,18 +76,25 @@ function observeAutoplay(videoEl) {
 }
 
 /**
- * Decorates the hero block, adding video background support
- * for the "video" variant.
+ * Find the first video link (MP4 or DM Video) in the block.
+ * @param {Element} block The hero block element
+ * @returns {HTMLAnchorElement|null}
+ */
+function findVideoLink(block) {
+  const links = block.querySelectorAll('a[href]');
+  return [...links].find((a) => isMp4Url(a.href) || isDMVideoUrl(a.href)) || null;
+}
+
+/**
+ * Decorates the hero block, adding video background support.
+ * Auto-detects video links (MP4 or Dynamic Media Video) in the content.
  * @param {Element} block The hero block element
  */
 export default function decorate(block) {
-  if (!block.classList.contains('video')) return;
-
-  const link = block.querySelector('a[href]');
+  const link = findVideoLink(block);
   if (!link) return;
 
   const videoSrc = link.href;
-  if (!isMp4Url(videoSrc) && !isDMVideoUrl(videoSrc)) return;
 
   // Grab poster image if authored
   const posterPicture = block.querySelector('picture');

@@ -24,16 +24,17 @@
   position:relative;
   z-index: 1;
 }
+
 .hero h1::after {
   background-color: var(--main-accent-color);
   content: "";
   display: block;
   height: 5px;
-  margin: auto;
   transition: width .4s ease-in-out;
   width: 128px;
   margin: 20px auto 30px;
 }
+
 .hero h2 {
   width: 100%;
   max-width: 1200px;
@@ -46,16 +47,17 @@
   position:relative;
   z-index: 1;
 }
+
 .hero h2::after {
   background-color: var(--main-accent-color);
   content: "";
   display: block;
   height: 5px;
-  margin: auto;
   transition: width .4s ease-in-out;
   width: 128px;
   margin: 20px auto 30px;
 }
+
 .hero h3 {
   width: 100%;
   max-width: 1200px;
@@ -68,16 +70,17 @@
   position:relative;
   z-index: 1;
 }
+
 .hero h3::after {
   background-color: var(--main-accent-color);
   content: "";
   display: block;
   height: 5px;
-  margin: auto;
   transition: width .4s ease-in-out;
   width: 128px;
   margin: 20px auto 30px;
 }
+
 .hero h4 {
   width: 100%;
   max-width: 1200px;
@@ -90,16 +93,17 @@
   position:relative;
   z-index: 1;
 }
+
 .hero h4::after {
   background-color: var(--main-accent-color);
   content: "";
   display: block;
   height: 5px;
-  margin: auto;
   transition: width .4s ease-in-out;
   width: 128px;
   margin: 20px auto 30px;
 }
+
 .hero h5 {
   width: 100%;
   max-width: 1200px;
@@ -112,16 +116,17 @@
   position:relative;
   z-index: 1;
 }
+
 .hero h5::after {
   background-color: var(--main-accent-color);
   content: "";
   display: block;
   height: 5px;
-  margin: auto;
   transition: width .4s ease-in-out;
   width: 128px;
   margin: 20px auto 30px;
 }
+
 .hero h6 {
   width: 100%;
   max-width: 1200px;
@@ -134,16 +139,17 @@
   position:relative;
   z-index: 1;
 }
+
 .hero h6::after {
   background-color: var(--main-accent-color);
   content: "";
   display: block;
   height: 5px;
-  margin: auto;
   transition: width .4s ease-in-out;
   width: 128px;
   margin: 20px auto 30px;
 }
+
 .hero p {
   width: 100%;
   max-width: 1200px;
@@ -170,18 +176,61 @@
   height: 100%;
 }
 
+/* Video hero variant */
+.hero.video {
+  overflow: hidden;
+}
+
+.hero .hero-video {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero .hero-text-overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero .hero-text-overlay h1,
+.hero .hero-text-overlay h2,
+.hero .hero-text-overlay h3,
+.hero .hero-text-overlay h4,
+.hero .hero-text-overlay h5,
+.hero .hero-text-overlay h6 {
+  color: var(--text-light);
+  text-shadow: 1px 1px 4px rgb(0 0 0 / 60%);
+  font-family: var(--black-font-family);
+}
+
+.hero .hero-text-overlay p {
+  color: var(--text-light);
+  text-shadow: 1px 1px 4px rgb(0 0 0 / 60%);
+}
+
+.hero .hero-text-overlay .button-container a {
+  color: var(--text-light);
+}
+
 @media (width >= 900px) {
   .hero {
     padding: 40px 32px;
   }
 }
 
-
-
-
 /* Responsive Styles */
 @media (width < 1024px) {
-
   .hero {
     min-height: 650px;
   }
@@ -189,10 +238,9 @@
 }
 
 @media (width < 768px) {
-
   .hero {
     min-height: 600px;
   }
-  
+
 }
 
